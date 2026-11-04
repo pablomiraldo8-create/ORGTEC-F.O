@@ -6,6 +6,9 @@
 <title>Relevamiento de Cámaras</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="theme-color" content="#16313A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
 /* Layout: app de campo de una columna; buscador fijo arriba, cámara y preguntas al medio, barra de navegación fija abajo */
@@ -1560,5 +1563,6 @@ addEventListener('visibilitychange', () => { if (!document.hidden) buscarVersion
   if (!cfg.nombre) setTimeout(() => { toast('Poné tu nombre en ⚙ (Ajustes)', 3500); }, 800);
 })();
 </script>
+<script>if('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('sw.js', { scope:'./' }).catch(() => {}));</script>
 </body>
 </html>
